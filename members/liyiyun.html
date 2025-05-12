@@ -4,13 +4,87 @@ permalink: /members/liyiyun.html
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
   <meta charset="UTF-8">
   <title>Li Yiyun</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      line-height: 1.6;
+      margin: 2rem;
+    }
+    .profile-img {
+      max-width: 180px;
+      float: right;
+      margin-left: 1rem;
+      border-radius: 50%;
+    }
+    section {
+      margin-bottom: 2rem;
+      clear: both;
+    }
+    section h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.5rem;
+    }
+    ul {
+      list-style: disc inside;
+      margin: 0.5rem 0 0 1rem;
+      padding: 0;
+    }
+  </style>
 </head>
 <body>
+
+  <!-- 标题和头像 -->
   <h1>Li Yiyun</h1>
-  <p>这里写 Li Yiyun 的个人简介……</p>
+  <img src="/assets/images/liyiyun1.jpg"
+       alt="Li Yiyun 头像"
+       class="profile-img" />
+
+  <!-- 教育背景 -->
+  <section id="education">
+    <h2>教育背景</h2>
+    <ul>
+      <li>Ph.D. in Bioinformatics & Genetics, The University of Hong Kong</li>
+      <li>M.Sc. in Bioinformatics, Fujian Agriculture and Forestry University</li>
+      <li>B.Sc. in Bioinformatics, Fujian Agriculture and Forestry University</li>
+    </ul>
+  </section>
+
+  <!-- 研究方向 -->
+  <section id="research">
+    <h2>研究方向</h2>
+    <ul>
+      <li>多组学数据整合与分析</li>
+      <li>单细胞 RNA-seq 机器学习方法</li>
+      <li>图神经网络在蛋白–蛋白相互作用预测中的应用</li>
+      <li>系统性红斑狼疮遗传机制研究</li>
+    </ul>
+  </section>
+
+  <!-- 兴趣爱好 -->
+  <section id="interests">
+    <h2>兴趣爱好</h2>
+    <ul>
+      <li>登山和徒步</li>
+      <li>古典音乐欣赏</li>
+      <li>机器学习最新论文跟踪</li>
+      <li>摄影与旅行</li>
+    </ul>
+  </section>
+
+  <!-- 论文发表 -->
+  <section id="publications">
+    <h2>论文发表</h2>
+    <ul>
+      <li><strong>Wang YF</strong>, Li YY, et al. “Identification of 38 novel loci for SLE…” <em>Nat. Commun.</em>, 2021.</li>
+      <li><strong>Wang YF</strong>, Li YY, et al. “Lupus enhancer risk variant causes dysregulation of IRF8…” <em>Nat. Commun.</em>, 2022.</li>
+      <li><strong>Wang YF</strong>, Li YY, et al. “Biological insights into SLE through an immune cell-specific TWAS” <em>Ann. Rheum. Dis.</em>, 2022.</li>
+      <!-- …更多条目… -->
+    </ul>
+  </section>
+
 </body>
 </html>
