@@ -1,0 +1,12 @@
+# 文件：_data/members.yml
+
+- name: "Li Yiyun"
+  url: "/members/liyiyun.html"
+
+- name: "Chen Yidan"
+  url: "/members/chenyidan.html"
+
+- name: "Huang Hongjie"
+  url: "/members/huanghongjie.html"
+
+# …在这里继续添加其他成员…
