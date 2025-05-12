@@ -96,6 +96,14 @@ Currently, Dr. Wang is the principal investigator of several ongoing research pr
 - National Natural Science Foundation of China (NSFC) General Program<br />
 - Shenzhen-Hong Kong-Macao Science and Technology Innovation Program (Category A)<br />
 - Two CUHK & CUHK-Shenzhen 1+1+1 Collaborative Research Programs</p>
+
+      <!-- 新增：Lab Members 列表循环 -->
+      <h3>Lab Members</h3>
+      <ul>
+        {% for m in site.data.members %}
+          <li><a href="{{ m.url }}">{{ m.name }}</a></li>
+        {% endfor %}
+      </ul>
     </section>
 
     <section id="projects" class="section">
