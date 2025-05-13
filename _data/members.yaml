@@ -1,15 +1,12 @@
-# 文件：_data/members.yml
+- name: Li Yiyun
+  role: MPhil Student in Biological science
+  url: /members/liyiyun.html
+  image: /assets/images/liyiyun1.jpg
 
-- name: "Li Yiyun"
-  url: "/members/liyiyun.html"
+- name: Cai Lizhi
+  role: MPhil Student in Biological science
+  url: /members/cailizhi.html
+  image: /assets/images/cailizhi1.jpg
 
-- name: "Cai Lizhi"
-  url: "/members/cailizhi.html"
-
-- name: "Chen Yidan"
-  url: "/members/chenyidan.html"
-
-- name: "Huang Hongjie"
-  url: "/members/huanghongjie.html"
 
 # …在这里继续添加其他成员…
