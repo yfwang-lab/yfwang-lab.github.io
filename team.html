@@ -126,13 +126,13 @@ Currently, Dr. Wang is the principal investigator of several ongoing research pr
 
 <h2>Team</h2>
       <!-- 新增：Lab Members 列表循环 -->
-      <div style="display: flex; flex-wrap: wrap; gap: 2rem;">
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 3rem 4rem; justify-items: center;">
         {% for m in site.data.members %}
-          <div class="lab-member" style="text-align: center; width: 180px;">
+          <div class="lab-member" style="text-align: center; width: 260px;">
             <a href="{{ m.url }}">
               <img src="{{ m.image }}" alt="{{ m.name }} photo"
                    class="lab-member-img"
-                   style="width: 300px; height: 300px; object-fit: cover; border-radius: 50%; margin-bottom: 0.5rem;">
+                   style="width: 300px; height: 300px; object-fit: cover; border-radius: 50%; margin-bottom: 1rem;">
               <div class="name" style="font-weight: bold;">{{ m.name }}</div>
               <div class="role" style="color: #555;">{{ m.role }}</div>
             </a>
