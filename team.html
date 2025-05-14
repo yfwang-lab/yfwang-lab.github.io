@@ -1,15 +1,10 @@
----
-layout: none
----
-
+<!DOCTYPE html>
+<html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yongfei Wang's Lab</title>
-
-  <!-- 引入 Google Fonts: Roboto 字体 -->
+  <title>Team - Yongfei Wang's Lab</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
   <style>
     body {
       font-family: 'Roboto', system-ui, sans-serif;
@@ -55,7 +50,7 @@ layout: none
       padding: 1rem;
     }
     .profile-img {
-      max-width: 200px;
+      max-width: 260px;
       float: right;
       margin-left: 2rem;
       border-radius: 6px;
@@ -74,22 +69,14 @@ layout: none
     .lab-member .role, .lab-member-role {
       font-size: 1rem;
     }
-    /* 新增：team 部分样式增强 */
     #team h1 {
       font-size: 38px;
     }
     #team p, #team li, #team strong, #team em {
-      font-size: 25px;
+      font-size: 18px;
     }
     #team .profile-img {
-      max-width: 260px;
-    }
-    #team .lab-member {
-      font-size: 23px;
-    }
-    #team .lab-member-img {
-      width: 150px !important;
-      height: 150px !important;
+      max-width: 300px;
     }
     #team .lab-member-img, #past-students .lab-member-img {
       width: 300px !important;
@@ -100,32 +87,23 @@ layout: none
     }
   </style>
 </head>
-
 <body>
   <header>
     <h1>Yongfei Wang's Lab</h1>
     <p>Computational Biology & Bioinformatics</p>
   </header>
-
   <nav>
-    <a href="#about">About</a>
+    <a href="index.html">About</a>
     <a href="team.html">Team</a>
     <a href="projects.html">Projects</a>
     <a href="publications.html">Publications</a>
     <a href="contact.html">Contact</a>
   </nav>
-
   <div class="container">
-    <section id="about" class="section">
-      <h2>About</h2>
-      <p>Our lab, based at The Chinese University of Hong Kong, Shenzhen School of Medicine, is dedicated to integrative multi-omics and AI-powered modeling to decipher the molecular mechanisms of complex diseases. We focus on immune-related and metabolic disorders such as systemic lupus erythematosus, diabetic myopathy, and various cancers including triple-negative breast cancer. By combining transcriptomics, genomics, and functional data with cutting-edge machine learning methods, our research aims to uncover novel biomarkers, regulatory interactions, and therapeutic targets. Recent efforts also explore population-specific genomic disparities and bioinformatics tools for clinical applications.      </p>
-    </section>
-
     <section id="team" class="section">
       <h2>Principal Investigator</h2>
       <h1>Wang, Yongfei</h1>
       <img src="462c111e-5be7-45dc-9404-fc4063b9306e.png" alt="Dr. Yongfei Wang" class="profile-img" />
-      
       <p><em>Presidential Young Fellow, Assistant Professor</em></p>
       <p><strong>Email:</strong> <a href="mailto:yfwang@cuhk.edu.cn">yfwang@cuhk.edu.cn</a></p>
       <p><strong>Education:</strong><br />
@@ -152,61 +130,31 @@ Currently, Dr. Wang is the principal investigator of several ongoing research pr
               <img src="{{ m.image }}" alt="{{ m.name }} photo"
                    class="lab-member-img"
                    style="width: 300px; height: 300px; object-fit: cover; border-radius: 50%; margin-bottom: 0.5rem;">
-              <div style="font-weight: bold; font-size: 1.25rem;">{{ m.name }}</div>
-              <div style="font-size: 1.05rem; color: #555;">{{ m.role }}</div>
+              <div class="name" style="font-weight: bold;">{{ m.name }}</div>
+              <div class="role" style="color: #555;">{{ m.role }}</div>
             </a>
           </div>
         {% endfor %}
       </div>      
+    </section>
 
     <section id="past-students" class="section">
       <h2>Past Students</h2>
       <div style="display: flex; flex-wrap: wrap; gap: 2rem;">
         <div class="lab-member" style="text-align: center; width: 180px;">
-          <!-- 照片已删除 -->
-          <div style="font-weight: bold; font-size: 1.25rem;">张三</div>
-          <div style="font-size: 1.05rem; color: #555;">2020-2022, 现于XX大学</div>
+          <div class="name" style="font-weight: bold;">张三</div>
+          <div class="role" style="color: #555;">2020-2022, 现于XX大学</div>
         </div>
         <div class="lab-member" style="text-align: center; width: 180px;">
-          <!-- 照片已删除 -->
-          <div style="font-weight: bold; font-size: 1.25rem;">李四</div>
-          <div style="font-size: 1.05rem; color: #555;">2019-2021, 现于XX公司</div>
+          <div class="name" style="font-weight: bold;">李四</div>
+          <div class="role" style="color: #555;">2019-2021, 现于XX公司</div>
         </div>
         <!-- 可继续添加更多学生 -->
       </div>
     </section>
-
-    <section id="projects" class="section">
-      <h2>Research Projects</h2>
-      <ul>
-        <li>Multi-omics Integration for Cancer Subtyping</li>
-        <li>AI for Single-Cell RNA-seq Analysis</li>
-        <li>Graph Neural Networks for Protein-Protein Interaction Prediction</li>
-      </ul>
-    </section>
-
-    <section id="publications" class="section">
-      <h2>Selected Publications</h2>
-      <ul>
-        <li><u><strong>Wang YF</strong></u>, et al. "Identification of 38 novel loci for systemic lupus erythematosus and genetic heterogeneity between ancestral groups." <em>Nature Communications</em>, 2021.</li>
-        <li><u><strong>Wang YF</strong></u>, et al. "Lupus enhancer risk variant causes dysregulation of IRF8 through cooperative lncRNA and DNA methylation machinery." <em>Nature Communications</em>, 2022.</li>
-        <li><u><strong>Wang YF</strong></u>, et al. "Biological insights into systemic lupus erythematosus through an immune cell-specific transcriptome-wide association study." <em>Annals of the Rheumatic Diseases</em>, 2022.</li>
-        <li><u><strong>Wang YF</strong></u>, et al. "Random Forests Algorithm Boosts Genetic Risk Prediction of Systemic Lupus Erythematosus." <em>Frontiers in Genetics</em>, 2022.</li>
-        <li><u><strong>Wang YF</strong></u>, et al. "Identification of Shared and Asian-Specific Loci for Systemic Lupus Erythematosus." <em>Arthritis & Rheumatology</em>, 2022.</li>
-      </ul>
-      <p>Full publication list available upon request or on <a href="https://scholar.google.com/citations?user=RUXdI4AAAAAJ&hl=en" target="_blank">Google Scholar</a>.</p>
-    </section>
-
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:yfwang@cuhk.edu.cn">yfwang@cuhk.edu.cn</a></p>
-      <p>Location: School of Medicine, The Chinese University of Hong Kong, Shenzhen</p>
-    </section>
   </div>
-
   <footer>
     <p>&copy; 2025 Yongfei Wang's Lab. All rights reserved.</p>
   </footer>
 </body>
-
 </html>
