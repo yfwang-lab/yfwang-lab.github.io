@@ -1,6 +1,8 @@
 ---
 layout: none
 ---
+{% include header.html %}
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -101,22 +103,6 @@ layout: none
 </head>
 
 <body>
-  <header style="display: flex; align-items: center; justify-content: center; gap: 1.5rem; background-color: #003366; color: white; padding: 2rem; text-align: center;">
-    <img src="logo.png" alt="Lab Logo" style="height: 48px; background: #fff; border-radius: 8px; padding: 2px 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.04);">
-    <div>
-      <h1 style="margin: 0;">Yongfei Wang's Lab</h1>
-      <p style="margin: 0;">Computational Biology & Bioinformatics</p>
-    </div>
-  </header>
-
-  <nav>
-    <a href="#about">About</a>
-    <a href="team.html">Team</a>
-    <a href="projects.html">Projects</a>
-    <a href="publications.html">Publications</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
   <div class="container">
     <section id="about" class="section">
       <h2>About</h2>
@@ -139,14 +125,12 @@ layout: none
 Dr. Wang has led one National Natural Science Foundation of China (NSFC) Youth Project (completed), and participated in a National Key R&D Program of China (Precision Medicine, completed). He received the Beijing Medical Science and Technology Award (Second Prize, 2021) and the Outstanding Research Achievement Award from the Li Ka Shing Faculty of Medicine, The University of Hong Kong (2017).</p>
 <p><strong>Ongoing Grants:</strong><br />
 Currently, Dr. Wang is the principal investigator of several ongoing research projects, including:<br />
-+- National Natural Science Foundation of China (NSFC) General Program<br />
-+- Shenzhen-Hong Kong-Macao Science and Technology Innovation Program (Category A)<br />
-+- Two CUHK & CUHK-Shenzhen 1+1+1 Collaborative Research Programs</p>
+- National Natural Science Foundation of China (NSFC) General Program<br />
+- Shenzhen-Hong Kong-Macao Science and Technology Innovation Program (Category A)<br />
+- Two CUHK & CUHK-Shenzhen 1+1+1 Collaborative Research Programs</p>
   </div>
 
-  <footer>
-    <p>&copy; 2025 Yongfei Wang's Lab. All rights reserved.</p>
-  </footer>
+{% include footer.html %}
 </body>
 
 </html>
