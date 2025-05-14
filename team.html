@@ -124,17 +124,17 @@ Currently, Dr. Wang is the principal investigator of several ongoing research pr
 - Shenzhen-Hong Kong-Macao Science and Technology Innovation Program (Category A)<br />
 - Two CUHK & CUHK-Shenzhen 1+1+1 Collaborative Research Programs</p>
 
-<h2>Team</h2>
+<h2>Members</h2>
       <!-- 新增：Lab Members 列表循环 -->
-      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 3rem 4rem; justify-items: center;">
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.2rem 2.5rem; justify-items: center;">
         {% for m in site.data.members %}
-          <div class="lab-member" style="text-align: center; width: 260px;">
+          <div class="lab-member" style="text-align: center; width: 180px;">
             <a href="{{ m.url }}">
               <img src="{{ m.image }}" alt="{{ m.name }} photo"
                    class="lab-member-img"
-                   style="width: 300px; height: 300px; object-fit: cover; border-radius: 50%; margin-bottom: 1rem;">
-              <div class="name" style="font-weight: bold;">{{ m.name }}</div>
-              <div class="role" style="color: #555;">{{ m.role }}</div>
+                   style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; margin-bottom: 0.7rem;">
+              <div class="name" style="font-weight: bold; font-size: 1.08rem;">{{ m.name }}</div>
+              <div class="role" style="color: #555; font-size: 0.98rem;">{{ m.role }}</div>
             </a>
           </div>
         {% endfor %}
