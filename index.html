@@ -68,6 +68,23 @@ layout: none
       font-size: 26px;  /* 调大 h3 字体 */
       margin-top: 1.5rem;
     }
+    /* 新增：team 部分样式增强 */
+    #team h1 {
+      font-size: 38px;
+    }
+    #team p, #team li, #team strong, #team em {
+      font-size: 25px;
+    }
+    #team .profile-img {
+      max-width: 260px;
+    }
+    #team .lab-member {
+      font-size: 23px;
+    }
+    #team .lab-member-img {
+      width: 150px !important;
+      height: 150px !important;
+    }
   </style>
 </head>
 
@@ -117,12 +134,13 @@ Currently, Dr. Wang is the principal investigator of several ongoing research pr
       <!-- 新增：Lab Members 列表循环 -->
       <div style="display: flex; flex-wrap: wrap; gap: 2rem;">
         {% for m in site.data.members %}
-          <div style="text-align: center; width: 160px;">
+          <div class="lab-member" style="text-align: center; width: 180px;">
             <a href="{{ m.url }}">
               <img src="{{ m.image }}" alt="{{ m.name }} photo"
-                   style="width: 110px; height: 110px; object-fit: cover; border-radius: 50%; margin-bottom: 0.5rem;">
-              <div style="font-weight: bold;">{{ m.name }}</div>
-              <div style="font-size: 0.9rem; color: #555;">{{ m.role }}</div>
+                   class="lab-member-img"
+                   style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; margin-bottom: 0.5rem;">
+              <div style="font-weight: bold; font-size: 1.25rem;">{{ m.name }}</div>
+              <div style="font-size: 1.1rem; color: #555;">{{ m.role }}</div>
             </a>
           </div>
         {% endfor %}
