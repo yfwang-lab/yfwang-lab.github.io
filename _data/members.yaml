@@ -1,15 +1,15 @@
 - name: LI Yiyun
-  role: MPhil Student in Biological science
+  role: MPhil student in Biological science
   url: /members/liyiyun.html
   image: /assets/images/liyiyun1.jpg
 
 - name: CAI Lizhi
-  role: MPhil Student in Biological science
+  role: MPhil student in Biological science
   url: /members/cailizhi.html
   image: /assets/images/cailizhi1.jpg
 
 - name: XU Yuan  
-  role: Undergraduate Stdent in Bioinformatics  
+  role: Undergraduate stdent in Bioinformatics  
   url: /members/xuyuan.html  
   image: /assets/images/xuyuan1.jpg
 # …在这里继续添加其他成员…
