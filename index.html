@@ -271,14 +271,14 @@
                     <a href="members/liyiyun-new.html" class="member-card bg-white rounded-xl p-6 text-center shadow-sm border border-slate-200 hover:border-blue-300 transition block cursor-pointer">
                         <img src="assets/images/liyiyun1.jpg" alt="LI Yiyun" class="w-24 h-24 mx-auto rounded-full object-cover mb-4 shadow-md">
                         <h4 class="font-bold text-slate-900 text-sm">LI Yiyun</h4>
-                        <p class="text-xs text-teal-600 font-bold uppercase mt-1">MPhil Student</p>
+                        <p class="text-xs text-teal-600 font-bold uppercase mt-1">M.Phil. Student</p>
                         <p class="text-xs text-slate-500 mt-1">Biological Science</p>
                     </a>
                     <!-- Member: CAI Lizhi -->
                     <a href="members/cailizhi-new.html" class="member-card bg-white rounded-xl p-6 text-center shadow-sm border border-slate-200 hover:border-blue-300 transition block cursor-pointer">
                         <img src="assets/images/cailizhi1.jpg" alt="蔡李智" class="w-24 h-24 mx-auto rounded-full object-cover mb-4 shadow-md">
                         <h4 class="font-bold text-slate-900 text-sm">蔡李智 (CAI Lizhi)</h4>
-                        <p class="text-xs text-teal-600 font-bold uppercase mt-1">PhD Student</p>
+                        <p class="text-xs text-teal-600 font-bold uppercase mt-1">Ph.D. Student</p>
                         <p class="text-xs text-slate-500 mt-1">Computational Biology</p>
                     </a>
                 </div>
@@ -787,6 +787,35 @@ new Chart(ctxRadar, {
             });
 
             // Profile image is now a real photo, no canvas needed
+            
+            // Auto-assign colors based on position title
+            document.querySelectorAll('.member-card').forEach(card => {
+                const positionElement = card.querySelector('p.uppercase');
+                if (positionElement) {
+                    const position = positionElement.textContent.trim().toLowerCase();
+                    
+                    // Remove all color classes first
+                    positionElement.classList.remove('text-teal-600', 'text-blue-600', 'text-purple-600', 'text-green-600');
+                    
+                    // Assign color based on position
+                    if (position.includes('ph.d.') || position.includes('phd')) {
+                        // PhD Candidate or PhD Student
+                        positionElement.classList.add('text-blue-600');
+                    } else if (position.includes('mphil') || position.includes('m.phil')) {
+                        // MPhil Student
+                        positionElement.classList.add('text-teal-600');
+                    } else if (position.includes('postdoc')) {
+                        // Postdoctoral Fellow
+                        positionElement.classList.add('text-green-600');
+                    } else if (position.includes('undergraduate')) {
+                        // Undergraduate
+                        positionElement.classList.add('text-purple-600');
+                    } else {
+                        // Default color
+                        positionElement.classList.add('text-slate-600');
+                    }
+                }
+            });
         });
     </script>
 </body>
