@@ -67,10 +67,10 @@ const html = template.render();
 ## 🚀 使用方法
 
 ### 方法一：使用可视化生成器（推荐）
-
+python3 -m http.server 8000
 1. **打开生成器**
    ```
-   在浏览器中打开：members/generate-member-page.html
+   在浏览器中打开：http://localhost:8000/members/generate-member-page.html
    ```
 
 2. **准备数据文件**
