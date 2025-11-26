@@ -4,8 +4,13 @@
  */
 
 class MemberProfileTemplate {
-    constructor(memberData) {
+    constructor(memberData, siteConfig = null) {
         this.data = memberData;
+        this.config = siteConfig || (typeof SiteConfig !== 'undefined' ? SiteConfig : {
+            lab: { name: 'Wang Lab', shortName: 'CUHK-SZ', fullName: "Yongfei Wang's Lab", institution: 'CUHK-Shenzhen' },
+            footer: { backgroundColor: 'bg-white', borderColor: 'border-slate-200', textColor: 'text-slate-700', subtextColor: 'text-slate-500', logoPath: 'logo.png' },
+            copyright: { year: new Date().getFullYear(), holder: "Yongfei Wang's Lab" }
+        });
     }
 
     /**
@@ -44,19 +49,22 @@ class MemberProfileTemplate {
      * 渲染导航栏
      */
     renderNavigation() {
+        const labName = this.config.lab?.name || 'Wang Lab';
+        const shortName = this.config.lab?.shortName || 'CUHK-SZ';
+        
         return `
     <!-- Navigation -->
     <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
-                <div class="flex items-center gap-3">
+                <a href="../index.html" class="flex items-center gap-3 hover:opacity-80 transition">
                     <div class="w-8 h-8 bg-teal-600 rounded-lg flex items-center justify-center text-white">
                         <i class="fas fa-dna"></i>
                     </div>
-                    <span class="text-xl font-bold text-slate-900 tracking-tight">Wang Lab <span class="text-slate-400 font-light">| CUHK-SZ</span></span>
-                </div>
+                    <span class="text-xl font-bold text-slate-900 tracking-tight">${labName} <span class="text-slate-400 font-light">| ${shortName}</span></span>
+                </a>
                 <div class="flex items-center gap-4">
-                    <a href="../indexnew.html" class="text-sm font-medium text-slate-600 hover:text-teal-600 transition">
+                    <a href="../index.html" class="text-sm font-medium text-slate-600 hover:text-teal-600 transition">
                         <i class="fas fa-arrow-left mr-2"></i>Back to Home
                     </a>
                 </div>
@@ -280,13 +288,23 @@ class MemberProfileTemplate {
      * 渲染页脚
      */
     renderFooter() {
+        const labName = this.config.lab?.name || 'Wang Lab';
+        const institution = this.config.lab?.institution || 'CUHK-Shenzhen';
+        const fullName = this.config.lab?.fullName || "Yongfei Wang's Lab";
+        const year = this.config.copyright?.year || new Date().getFullYear();
+        const bgColor = this.config.footer?.backgroundColor || 'bg-white';
+        const borderColor = this.config.footer?.borderColor || 'border-slate-200';
+        const textColor = this.config.footer?.textColor || 'text-slate-700';
+        const subtextColor = this.config.footer?.subtextColor || 'text-slate-500';
+        const logoPath = this.config.footer?.logoPath || '../logo.png';
+        
         return `
     <!-- Footer -->
-    <footer class="bg-slate-900 py-12 text-center mt-16">
+    <footer class="${bgColor} border-t ${borderColor} py-12 text-center mt-16">
         <div class="max-w-7xl mx-auto px-4">
-            <img src="../logo.png" alt="Lab Logo" class="h-20 mx-auto mb-4 bg-white rounded-lg px-4 py-2 shadow-lg">
-            <p class="text-slate-500 mb-2">Wang Lab @ CUHK-Shenzhen</p>
-            <p class="text-slate-600 text-sm">&copy; 2025 Yongfei Wang's Lab. All rights reserved.</p>
+            <img src="${logoPath.startsWith('../') ? logoPath : '../' + logoPath}" alt="Lab Logo" class="h-20 mx-auto mb-4 rounded-lg px-4 py-2 shadow-md">
+            <p class="${textColor} font-medium mb-2">${labName} @ ${institution}</p>
+            <p class="${subtextColor} text-sm">&copy; ${year} ${fullName}. All rights reserved.</p>
         </div>
     </footer>
         `;
