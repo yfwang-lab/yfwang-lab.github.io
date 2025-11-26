@@ -63,7 +63,7 @@
 
 **主页导航：**
 ```
-http://localhost:8000/indexnew.html
+http://localhost:8000/index.html
 点击导航栏的 "Join Us"
 ```
 

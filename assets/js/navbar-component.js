@@ -8,7 +8,7 @@ class NavbarComponent {
         this.config = {
             labName: config.labName || 'Wang Lab',
             institution: config.institution || 'CUHK-SZ',
-            homePath: config.homePath || 'indexnew.html',
+            homePath: config.homePath || 'index.html',
             currentPage: config.currentPage || 'home',
             menuItems: config.menuItems || [
                 { name: 'Home', href: '#home', id: 'home' },

@@ -118,7 +118,7 @@ yfwang-lab.github.io/
 │       ├── footer-component.js     ← 页脚组件
 │       ├── navbar-component.js     ← 导航栏组件
 │       └── member-template.js      ← 成员页面模板（已更新）
-├── indexnew.html                   ← 主页
+├── index.html                   ← 主页
 ├── join-us.html                    ← 招聘页面
 ├── members/                        ← 成员页面
 │   ├── *-new.html                 ← 所有成员页面（已更新）

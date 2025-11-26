@@ -86,7 +86,7 @@ if (successCount > 0) {
     console.log('\n🎉 页面生成完成！');
     console.log('💡 下一步：');
     console.log('   1. 检查生成的HTML文件');
-    console.log('   2. 在主页 indexnew.html 中添加成员链接');
+    console.log('   2. 在主页 index.html 中添加成员链接');
     console.log('   3. 提交到Git仓库');
 }
 

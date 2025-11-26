@@ -19,7 +19,7 @@ yfwang-lab.github.io/
 │   ├── generate-member-page.html      # 可视化页面生成器
 │   ├── zhaojinglu-new.html            # 生成的页面
 │   └── ...
-└── indexnew.html                       # 主页
+└── index.html                       # 主页
 ```
 
 ## 🎯 核心组件
@@ -84,7 +84,7 @@ python3 -m http.server 8000
    - 保存为 `members/姓名-new.html`
 
 4. **更新主页**
-   - 在 `indexnew.html` 中添加成员卡片链接
+   - 在 `index.html` 中添加成员卡片链接
 
 ### 方法二：使用命令行（Node.js）
 
