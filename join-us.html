@@ -139,7 +139,12 @@
                     <p class="text-slate-600">Please fill out the form below and attach your CV</p>
                 </div>
 
-                <form id="applicationForm" action="https://formspree.io/f/mjkdqzaa" method="POST" class="space-y-6">
+                <form id="applicationForm" action="https://formsubmit.co/lipu20202021@gmail.com" method="POST" enctype="multipart/form-data" class="space-y-6">
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_subject" value="New Application from Wang Lab Website">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="text" name="_honey" style="display:none">
+                    
                     <!-- Personal Information -->
                     <div class="border-l-4 border-teal-500 pl-4 mb-6">
                         <h3 class="text-xl font-bold text-slate-900 mb-4">Personal Information</h3>
@@ -411,58 +416,26 @@
             }
         });
 
-        // Form submission
+        // Form submission - FormSubmit handles everything automatically
         const form = document.getElementById('applicationForm');
-        const successMessage = document.getElementById('successMessage');
-
+        
         form.addEventListener('submit', function(e) {
-            e.preventDefault();
+            // Check file size before submission
+            const cvFile = document.getElementById('cvFile').files[0];
             
-            // Get form data
-            const formData = new FormData(form);
-            
-            // Here you would typically send the data to a server
-            // For now, we'll simulate a successful submission
+            if (cvFile && cvFile.size > 10 * 1024 * 1024) {
+                e.preventDefault();
+                alert('CV file is larger than 10MB. Please use a smaller file or email your CV separately to yongfeiwang@cuhk.edu.cn');
+                return false;
+            }
             
             // Show loading state
             const submitBtn = form.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerHTML;
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Submitting...';
             submitBtn.disabled = true;
             
-            // Simulate API call
-            setTimeout(() => {
-                // Hide form and show success message
-                form.classList.add('hidden');
-                successMessage.classList.remove('hidden');
-                
-                // Scroll to success message
-                successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                
-                // Log form data (for demonstration)
-                console.log('Form submitted with data:');
-                for (let [key, value] of formData.entries()) {
-                    if (value instanceof File) {
-                        console.log(key + ': ' + value.name);
-                    } else {
-                        console.log(key + ': ' + value);
-                    }
-                }
-                
-                // In production, you would send this to your backend:
-                // fetch('/api/submit-application', {
-                //     method: 'POST',
-                //     body: formData
-                // })
-                // .then(response => response.json())
-                // .then(data => {
-                //     // Handle success
-                // })
-                // .catch(error => {
-                //     // Handle error
-                // });
-                
-            }, 2000);
+            // FormSubmit will handle the rest automatically
+            // The form will submit normally and redirect to a thank you page
         });
 
         // Drag and drop for file uploads

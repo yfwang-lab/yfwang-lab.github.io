@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FormSubmit Hash Generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+<body>
+    <h1>FormSubmit Email Hash Generator</h1>
+    <p>Email: yongfeiwang@cuhk.edu.cn</p>
+    <p>MD5 Hash: <span id="hash"></span></p>
+    
+    <script>
+        const email = 'yongfeiwang@cuhk.edu.cn';
+        const hash = CryptoJS.MD5(email).toString();
+        document.getElementById('hash').textContent = hash;
+        console.log('Use this URL: https://formsubmit.co/' + hash);
+    </script>
+</body>
+</html>
