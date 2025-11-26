@@ -1,0 +1,90 @@
+{
+  "_comment": "这是一个成员数据模板，复制此文件并填写实际信息",
+  "_instructions": "1. 复制此文件并重命名为 姓名拼音.json",
+  "_instructions2": "2. 填写下面的字段（删除不需要的字段）",
+  "_instructions3": "3. 运行生成器或批量生成脚本",
+  
+  "name": "姓名（必填）",
+  "position": "职位描述（必填，如：Ph.D. Candidate in Biological Sciences）",
+  "image": "../assets/images/照片文件名.jpg（必填）",
+  
+  "email": "邮箱地址（可选）",
+  "institution": "所在机构（可选，如：The Chinese University of Hong Kong, Shenzhen）",
+  
+  "links": [
+    {
+      "_comment": "外部链接（可选），可以添加多个",
+      "icon": "fab fa-researchgate",
+      "url": "https://www.researchgate.net/profile/...",
+      "text": "ResearchGate Profile"
+    },
+    {
+      "icon": "fab fa-github",
+      "url": "https://github.com/...",
+      "text": "GitHub"
+    }
+  ],
+  
+  "education": [
+    {
+      "_comment": "教育背景（可选），按时间倒序排列",
+      "degree": "学位名称（如：Ph.D. Candidate in Biological Sciences）",
+      "institution": "学校名称",
+      "period": "时间段（可选，如：2023.09 – Present）"
+    },
+    {
+      "degree": "M.S. in XXX",
+      "institution": "学校名称",
+      "period": "2020.09 – 2023.06"
+    },
+    {
+      "degree": "B.S. in XXX",
+      "institution": "学校名称",
+      "period": "2016.09 – 2020.06"
+    }
+  ],
+  
+  "research": [
+    "_comment: 研究兴趣（可选），字符串数组",
+    "研究方向1",
+    "研究方向2",
+    "研究方向3",
+    "研究方向4"
+  ],
+  
+  "projects": [
+    {
+      "_comment": "科研项目（可选）",
+      "title": "项目全称（包括基金号）",
+      "description": "项目简介",
+      "role": "角色（如：Principal Investigator, Co-PI）",
+      "period": "时间段（如：2023.01 – 2025.12）",
+      "status": "状态（如：Under Research, Completed）"
+    }
+  ],
+  
+  "publications": [
+    {
+      "_comment": "发表论文（可选），按时间倒序",
+      "citation": "<strong>Your Name#</strong>, et al. Paper title. <em>Journal Name</em>, Year, Volume: Pages.",
+      "isFirst": true
+    },
+    {
+      "citation": "Author1, <strong>Your Name#</strong>, et al. Paper title. <em>Journal Name</em>, Year.",
+      "isFirst": false
+    }
+  ],
+  
+  "hobbies": [
+    {
+      "_comment": "兴趣爱好（可选）",
+      "_iconList": "常用图标：fa-hiking, fa-music, fa-camera, fa-swimmer, fa-book, fa-coffee, fa-plane, fa-gamepad",
+      "name": "爱好名称",
+      "icon": "fas fa-hiking"
+    },
+    {
+      "name": "另一个爱好",
+      "icon": "fas fa-music"
+    }
+  ]
+}

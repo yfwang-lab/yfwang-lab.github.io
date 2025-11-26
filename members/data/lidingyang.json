@@ -1,0 +1,52 @@
+{
+  "name": "LI Dingyang",
+  "position": "Ph.D. Student in Biological Sciences",
+  "image": "../assets/images/lidingyang.jpg",
+  "email": "dingyangli@link.cuhk.edu.cn",
+  "institution": "The Chinese University of Hong Kong, Shenzhen",
+  "education": [
+    {
+      "degree": "Ph.D. Candidate in Biological Sciences",
+      "institution": "The Chinese University of Hong Kong, Shenzhen",
+      "period": "2024.09 – Present"
+    },
+    {
+      "degree": "Master in Bioinformatics",
+      "institution": "The Chinese University of Hong Kong, Shenzhen"
+    },
+    {
+      "degree": "B.Sc. in Bioinformatics",
+      "institution": "University of Soochow"
+    }
+  ],
+  "research": [
+    "Genomics and genetics",
+    "Multi-omics",
+    "Statistical genetics",
+    "Machine Learning"
+  ],
+  "publications": [
+    {
+      "citation": "<strong>Dingyang, Li.</strong>, et al. (2025). Imputation Disparities Driven by Recent Selection and Their Impact on Disease Risk Estimation in East and Southeast Asian Populations. <em>biorxiv</em>. <a href=\"https://www.biorxiv.org/content/10.1101/2025.04.03.646928v1\" class=\"text-teal-600 hover:underline\" target=\"_blank\">DOI</a>",
+      "isFirst": true
+    },
+    {
+      "citation": "Xiaoyu Zuo., Jinglu Zhao., Zipeng Liu., Yuxiao Yao., <strong>Dingyang, Li.</strong>, et al. (2025). Integrated genomic analysis of EDNRB common and rare variants in Hirschsprung disease. <em>Genes & Diseases</em>. <a href=\"https://www.sciencedirect.com/science/article/pii/S2352304225000844\" class=\"text-teal-600 hover:underline\" target=\"_blank\">DOI</a>",
+      "isFirst": false
+    }
+  ],
+  "hobbies": [
+    {
+      "name": "Swimming",
+      "icon": "fas fa-swimmer"
+    },
+    {
+      "name": "Badminton",
+      "icon": "fas fa-table-tennis"
+    },
+    {
+      "name": "Metaphysics",
+      "icon": "fas fa-yin-yang"
+    }
+  ]
+}

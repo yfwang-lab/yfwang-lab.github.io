@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成员页面生成器 | Wang Lab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100 p-8">
+    <div class="max-w-4xl mx-auto">
+        <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h1 class="text-3xl font-bold text-slate-900 mb-4">🧬 Wang Lab 成员页面生成器</h1>
+            <p class="text-slate-600 mb-6">选择成员数据文件，自动生成统一样式的个人页面</p>
+            
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-2">选择成员数据文件 (JSON)</label>
+                    <input type="file" id="jsonFile" accept=".json" class="block w-full text-sm text-slate-500
+                        file:mr-4 file:py-2 file:px-4
+                        file:rounded-lg file:border-0
+                        file:text-sm file:font-semibold
+                        file:bg-teal-50 file:text-teal-700
+                        hover:file:bg-teal-100
+                        cursor-pointer">
+                </div>
+                
+                <button onclick="generatePage()" class="w-full bg-teal-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-teal-700 transition">
+                    生成页面
+                </button>
+            </div>
+        </div>
+
+        <div id="output" class="hidden bg-white rounded-xl shadow-lg p-8">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4">✅ 生成成功！</h2>
+            <p class="text-slate-600 mb-4">复制下面的HTML代码，保存为 <code class="bg-slate-100 px-2 py-1 rounded">.html</code> 文件</p>
+            
+            <div class="relative">
+                <button onclick="copyToClipboard()" class="absolute top-2 right-2 bg-teal-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-teal-700 transition">
+                    📋 复制代码
+                </button>
+                <pre id="htmlOutput" class="bg-slate-900 text-slate-100 p-6 rounded-lg overflow-x-auto text-sm leading-relaxed max-h-96"></pre>
+            </div>
+            
+            <div class="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                <h3 class="font-bold text-blue-900 mb-2">💡 使用提示</h3>
+                <ul class="text-sm text-blue-800 space-y-1">
+                    <li>• 将生成的HTML保存到 <code>members/</code> 目录</li>
+                    <li>• 文件命名格式：<code>姓名拼音-new.html</code></li>
+                    <li>• 确保图片路径正确（相对于members目录）</li>
+                    <li>• 在主页添加对应的成员卡片链接</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg p-8 mt-8">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4">📝 JSON数据格式示例</h2>
+            <pre class="bg-slate-900 text-slate-100 p-6 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>{
+  "name": "姓名",
+  "position": "职位描述",
+  "image": "../assets/images/photo.jpg",
+  "email": "email@example.com",
+  "institution": "机构名称",
+  "links": [
+    {
+      "icon": "fab fa-researchgate",
+      "url": "https://...",
+      "text": "链接文本"
+    }
+  ],
+  "education": [
+    {
+      "degree": "学位",
+      "institution": "学校",
+      "period": "时间段"
+    }
+  ],
+  "research": ["研究方向1", "研究方向2"],
+  "projects": [
+    {
+      "title": "项目名称",
+      "description": "项目描述",
+      "role": "角色",
+      "period": "时间",
+      "status": "状态"
+    }
+  ],
+  "publications": [
+    {
+      "citation": "完整引用",
+      "isFirst": true
+    }
+  ],
+  "hobbies": [
+    {
+      "name": "爱好名称",
+      "icon": "fas fa-icon"
+    }
+  ]
+}</code></pre>
+        </div>
+    </div>
+
+    <script src="../assets/js/member-template.js"></script>
+    <script>
+        let generatedHTML = '';
+
+        function generatePage() {
+            const fileInput = document.getElementById('jsonFile');
+            const file = fileInput.files[0];
+            
+            if (!file) {
+                alert('请先选择JSON文件！');
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const memberData = JSON.parse(e.target.result);
+                    const template = new MemberProfileTemplate(memberData);
+                    generatedHTML = template.render();
+                    
+                    document.getElementById('htmlOutput').textContent = generatedHTML;
+                    document.getElementById('output').classList.remove('hidden');
+                    
+                    // 滚动到输出区域
+                    document.getElementById('output').scrollIntoView({ behavior: 'smooth' });
+                } catch (error) {
+                    alert('JSON格式错误：' + error.message);
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        function copyToClipboard() {
+            navigator.clipboard.writeText(generatedHTML).then(() => {
+                alert('✅ 代码已复制到剪贴板！');
+            }).catch(err => {
+                alert('复制失败：' + err);
+            });
+        }
+    </script>
+</body>
+</html>
