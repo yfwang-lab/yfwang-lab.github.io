@@ -1,0 +1,64 @@
+{
+  "name": "XU Yuan",
+  "position": "Undergraduate",
+  "image": "xuyuan1.jpg",
+  "email": "yuanxu2@link.cuhk.edu.cn",
+  "institution": "The Chinese University of Hong Kong, Shenzhen",
+  "links": [
+    {
+      "icon": "fab fa-github",
+      "url": "https://github.com/XY3070",
+      "text": "GitHub"
+    },
+    {
+      "icon": "fab fa-researchgate",
+      "url": "https://www.researchgate.net/profile/Yuan-Xu-106?ev=hdr_xprf",
+      "text": "ResearchGate"
+    },
+    {
+      "icon": "fab fa-google-scholar",
+      "url": "https://scholar.google.com/citations?view_op=list_works&hl=en&authuser=1&user=r3G6WUEAAAAJ",
+      "text": "Google Scholar"
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor in Bioinformatics",
+      "institution": "The Chinese University of Hong Kong, Shenzhen",
+      "period": "2023.09-Present"
+    }
+  ],
+  "research": [
+    "Genomics",
+    "Genetics"
+  ],
+  "projects": [],
+  "publications": [
+    {
+      "citation": "Li, D., Tangtanatakul, P., Lei, Y. et al. Imputation disparities driven by recent selection and their impact on disease risk estimation in East and Southeast Asian populations. Commun Biol (2025).",
+      "isFirst": false
+    }
+  ],
+  "hobbies": [
+    {
+      "name": "Musique",
+      "icon": "fas fa-music"
+    },
+    {
+      "name": "Nager",
+      "icon": "fas fa-swimmer"
+    },
+    {
+      "name": "Psychoanalyse",
+      "icon": "fas fa-book"
+    },
+    {
+      "name": "Pâtisserie",
+      "icon": "fas fa-coffee"
+    },
+    {
+      "name": "Photographie",
+      "icon": "fas fa-camera"
+    }
+  ]
+}
